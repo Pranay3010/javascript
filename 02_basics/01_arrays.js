@@ -39,10 +39,12 @@ console.log(myArray);
 
 // slice ,splice
 
-const slicedArray = myArray.slice(1, 4); // returns a shallow copy of a portion of the array into a new array object selected from start to end (end not included)
-console.log("A" ,myArray);
-console.log(slicedArray);
+// const slicedArray = myArray.slice(1, 4); // returns a shallow copy of a portion of the array into a new array object selected from start to end (end not included)
+// console.log("A" ,myArray);
+// console.log(slicedArray);
 
-const splicedArray = myArray.splice(1, 4); // changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
-console.log("B" ,myArray);
-console.log(splicedArray);
+// const splicedArray = myArray.splice(1, 4); // changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
+// console.log("B" ,myArray);
+// console.log(splicedArray);
+
+
