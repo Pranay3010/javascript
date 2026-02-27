@@ -1,5 +1,5 @@
-const marvelHeroes = ["thor", "ironman", "hulk", "captain america"];
-const dcHeroes = ["superman", "batman", "wonder woman", "flash"];
+// const marvelHeroes = ["thor", "ironman", "hulk", "captain america"];
+// const dcHeroes = ["superman", "batman", "wonder woman", "flash"];
 
 // marvelHeroes.push(dcHeroes); // adds the entire dcHeroes array as a single element to the end of the marvelHeroes array
 // console.log(marvelHeroes);
