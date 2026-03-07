@@ -5,8 +5,10 @@ const myArray = [1, 2, 3, 4, 5];
 const myHeroes = ["Superman", "Batman", "Wonder", "Flash", "Green Lantern"];
 
 //const arry = new Array(1, 2, 3, 4, 5 , 6);
-
-console.log(myArray);
+for (let i = 0; i < myArray.length; i++) {
+    console.log(myArray[i]);
+}
+// console.log(myArray);
 //console.log(arry);
 //console.log(myArray[1]);
 
