@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    // document.getElementById("owl").addEventListener("click", function() {
+    //     alert("You clicked on the owl image!");
+    // });
+
+
+    // document.getElementById("owl").addEventListener("click", function(e) {
+    //     console.log(e);
+    // }, false );
+
+// attachEventListener() method is used to attach an event handler to the specified element. It allows you to specify the type of event and the function that should be executed when that event occurs. In this case, we are attaching a click event listener to the image with the id "owl". When the image is clicked, an alert box will appear with the message "You clicked on the owl image!"
+// jQuery -on is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, and animation much simpler with an easy-to-use API that works across a multitude of browsers. With jQuery, you can write less code to achieve the same functionality as plain JavaScript. For example, instead of using document.getElementById("owl").addEventListener("click", function() { ... }); in plain JavaScript, you can simply use $("#owl").click(function() { ... }); in jQuery.
+
+// what to study
+// types of events
+// timestamps
+// preventDefault() method
+// target
+// toElement
+// srcElement
+// cureentTarget
+// clientX and clientY
+// screenX and screenY
+// altKey, ctrlKey, shiftKey, metaKey, keycode
+// keyboard speed
+
+    // bubbling and 
+
+    // document.getElementById("images").addEventListener("click", function(e) {
+    //     console.log("Clicked inside  the iamges ul");
+    // },false);
+
+    // document.getElementById("owl").addEventListener("click", function() {
+    //     console.log("You clicked on the owl image!");
+    // },false);
+    
+
+    //capturing
+    // document.getElementById("images").addEventListener("click", function(e) {
+    //     console.log("Clicked inside  the iamges ul");
+    // },true);
+
+    // document.getElementById("owl").addEventListener("click", function() {
+    //     console.log("You clicked on the owl image!");
+    // },true);
+
+    // stoppropagation() method is used to stop the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event. In this case, if you click on the owl image, it will only trigger the click event for that image and not for the parent ul element with id "images". This means that the console will only log "You clicked on the owl image!" and not "Clicked inside the images ul".
+    // document.getElementById("images").addEventListener("click", function(e) {
+    //     console.log("Clicked inside  the iamges ul");
+    // },false);
+
+    // document.getElementById("owl").addEventListener("click", function(e) {
+    //     console.log("You clicked on the owl image!");
+    //     e.stopPropagation();
+    // },false);
+
+
+    // // preventDefault() method is used to prevent the default action of an element from occurring. In this case, if you click on the Google link, it will prevent the browser from navigating to the Google website and instead log "You clicked on the google link!" in the console. Additionally, it will also stop the event from bubbling up to the parent ul element with id "images", so it will not log "Clicked inside the images ul" in the console.
+    document.getElementById("google").addEventListener("click", function(e) {
+        console.log("You clicked on the google link!");
+        e.preventDefault();
+        e.stopPropagation();f
+    },false);
+
+    // document.querySelector('#images').addEventListener('click', function(e) {
+    // //    console.log(e.target);
+    //    console.log(e.target.parentNode);
+    //     let removeElement = e.target.parentNode;
+    //     removeElement.remove();
+    // },false);
+
+
+    document.querySelector('#images').addEventListener('click', function(e) {
+       console.log(e.target.tagName);
+
+       if(e.target.tagName === 'IMG') {
+        console.log(e.target.id);
+        let removeElement = e.target.parentNode;
+        removeElement.remove();
+       }
+    },false);
+
+</script>
+</html>
