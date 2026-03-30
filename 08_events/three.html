@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming</title>
+</head>
+<body>
+    <h1> Chai Aur JavaScript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+// setInterval
+
+    // setInterval(function() {
+    //     console.log("Pranay Rathore",Date.now());
+    // },2000);
+
+    // const sayHello = function() {
+    //     console.log("Hello");
+    // }
+
+    // setInterval(sayHello,5000)
+
+
+    // const sayHello = function(str) {
+    //     console.log(str);
+    // }
+
+    // setInterval(sayHello,5000,"Hello from setInterval");
+
+    // clearInterval() method is used to stop a timer that was previously created with setInterval(). It takes the identifier of the timer as an argument, which is returned by the setInterval() function when the timer is created. When clearInterval() is called with the timer identifier, it stops the execution of the function that was scheduled to run at regular intervals. This is useful for preventing memory leaks and stopping unnecessary code execution when it is no longer needed.
+     
+
+    // const sayHello = function(str) {
+    //     console.log(str);
+    // }
+
+    // const stopInterval = setInterval(sayHello,5000,"Hello from setInterval");
+    // clearInterval(stopInterval);
+
+    document.querySelector('#start').addEventListener('click', function() {
+        const startInterval = setInterval(function() {
+            console.log("Interval Started");
+        },2000);
+
+    document.querySelector('#stop').addEventListener('click', function() {
+            clearInterval(startInterval);
+            console.log("Interval stopped");
+        });
+    });
+
+</script>
+
+</html>
